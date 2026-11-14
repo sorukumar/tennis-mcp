@@ -1,5 +1,7 @@
 # 🎾 tennis-mcp
 
+[![PyPI](https://img.shields.io/pypi/v/tennis-mcp.svg)](https://pypi.org/project/tennis-mcp/)
+[![sorukumar/tennis-mcp MCP server](https://glama.ai/mcp/servers/sorukumar/tennis-mcp/badges/score.svg)](https://glama.ai/mcp/servers/sorukumar/tennis-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](pyproject.toml)
 [![Data: sorukumar/tml-data](https://img.shields.io/badge/Data-sorukumar%2Ftml--data-orange.svg)](https://github.com/sorukumar/tml-data)
@@ -13,7 +15,7 @@ Query **200,105 ATP matches (1968–2026)**, **7,622 player careers**, **113,744
 
 ## ⚡ Quick Start (Zero Clone)
 
-`tennis-mcp` runs via `uvx` (or `pip`) and lazily caches only the Parquet/JSON tables your questions need into `~/.cache/tennis-mcp/`.
+`tennis-mcp` runs via `uvx` (or `pip install tennis-mcp`) and lazily caches only the Parquet/JSON tables your questions need into `~/.cache/tennis-mcp/`.
 
 ### Claude Desktop / Cursor / Antigravity (`mcpServers`)
 
@@ -22,11 +24,7 @@ Query **200,105 ATP matches (1968–2026)**, **7,622 player careers**, **113,744
   "mcpServers": {
     "tennis-mcp": {
       "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/sorukumar/tennis-mcp",
-        "tennis-mcp"
-      ]
+      "args": ["tennis-mcp"]
     }
   }
 }
@@ -35,7 +33,7 @@ Query **200,105 ATP matches (1968–2026)**, **7,622 player careers**, **113,744
 ### Claude Code (CLI)
 
 ```bash
-claude mcp add tennis-mcp -- uvx --from git+https://github.com/sorukumar/tennis-mcp tennis-mcp
+claude mcp add tennis-mcp -- uvx tennis-mcp
 ```
 
 ### VS Code (`.vscode/mcp.json`)
@@ -46,22 +44,18 @@ claude mcp add tennis-mcp -- uvx --from git+https://github.com/sorukumar/tennis-
     "tennis-mcp": {
       "type": "stdio",
       "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/sorukumar/tennis-mcp",
-        "tennis-mcp"
-      ]
+      "args": ["tennis-mcp"]
     }
   }
 }
 ```
 
-### Local Development / Offline `tml-data` Override
+### `pip` Install / Offline `tml-data` Override
 
-If you already cloned `sorukumar/tml-data`, point `TML_DATA_DIR` at it to skip HTTPS downloads completely:
+If you prefer `pip` or already cloned `sorukumar/tml-data`, install from PyPI and optionally point `TML_DATA_DIR` at your local data directory:
 
 ```bash
-pip install -e ".[dev]"
+pip install tennis-mcp
 TML_DATA_DIR=/path/to/tml-data/data tennis-mcp
 ```
 
