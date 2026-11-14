@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.sorukumar/tennis-mcp",
+  "title": "Tennis Analytics MCP",
+  "description": "Zero-clone ATP tennis analytics (200,105 matches since 1968), 7,663 Match Charting Project point/rally breakdowns, H2H, GSDI, NBI, and player comparisons.",
+  "repository": {
+    "url": "https://github.com/sorukumar/tennis-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "tennis-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "TML_DATA_DIR",
+          "description": "Optional path to a local tml-data/data directory to bypass HTTPS Parquet caching.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "TENNIS_MCP_CACHE_DIR",
+          "description": "Optional cache directory for downloaded Parquet/JSON slices (defaults to ~/.cache/tennis-mcp).",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
