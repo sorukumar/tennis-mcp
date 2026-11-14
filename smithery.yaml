@@ -1,0 +1,13 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+  commandFunction: |-
+    (config) => ({
+      command: 'uvx',
+      args: ['--from', 'git+https://github.com/sorukumar/tennis-mcp', 'tennis-mcp'],
+      env: {
+        PYTHONUNBUFFERED: '1'
+      }
+    })

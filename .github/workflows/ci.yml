@@ -17,6 +17,10 @@ jobs:
       - name: Install package with dev deps
         run: |
           python -m pip install --upgrade pip
-          pip install -e ".[dev]"
+          pip install -e ".[dev]" build twine
       - name: Run unit and offline MCP tests
         run: pytest -v -k "not remote"
+      - name: Verify PyPI package build and metadata
+        run: |
+          python -m build
+          twine check dist/*

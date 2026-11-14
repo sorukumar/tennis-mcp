@@ -130,3 +130,5 @@ Claude / Cursor / Antigravity / VS Code
 - **Code**: MIT License ([LICENSE](LICENSE))
 - **ATP Match & Career Warehouse (`sorukumar/tml-data`)**: Built on [Tennismylife / TML-Database](https://github.com/Tennismylife/TML-Database) and Jeff Sackmann's ATP archive (MIT).
 - **Match Charting Project Tables (`mcp_*.parquet`)**: Derived from [Jeff Sackmann's Match Charting Project](https://github.com/JeffSackmann/tennis_MatchChartingProject), licensed under **CC BY-NC-SA 4.0** (attribution required; non-commercial share-alike for charting tables).
+
+<!-- mcp-name: io.github.sorukumar/tennis-mcp -->
