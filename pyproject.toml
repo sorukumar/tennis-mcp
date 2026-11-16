@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tennis-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Zero-clone Model Context Protocol (MCP) server for 200,000+ ATP matches (1968-2026), Match Charting Project shot/rally metrics, H2H, and advanced analytics."
 readme = "README.md"
 license = "MIT"
